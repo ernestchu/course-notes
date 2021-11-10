@@ -31,7 +31,7 @@ module.exports = {
       }
     ],
   },
-  extendsMarkdown: (md) => {
-    md.use(mathjax3)
-  }
+  // extendsMarkdown: (md) => {
+  //   md.use(mathjax3)
+  // }
 }
