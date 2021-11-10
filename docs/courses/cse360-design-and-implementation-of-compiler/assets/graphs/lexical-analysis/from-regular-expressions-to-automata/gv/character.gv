@@ -1,0 +1,19 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	size="12,9!"
+    S0 [ style=invis ];
+    S1 [ style=invis ];
+    E0 [ style=invis ];
+    E1 [ style=invis ];
+	node [ 
+        label = "";
+        shape = doublecircle;
+    ]; n1; n3;
+	node [ shape=circle ];
+    S0 -> n0;
+    n0 -> n1 [ label="a" ];
+    n1 -> E0 [ style=invis ];
+    S1 -> n2;
+    n2 -> n3 [ label="ε" ];
+    n3 -> E1 [ style=invis ];
+}

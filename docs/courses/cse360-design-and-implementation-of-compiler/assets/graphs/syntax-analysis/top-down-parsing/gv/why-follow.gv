@@ -1,0 +1,28 @@
+digraph tree {
+	size="12,9!"
+	node [ shape=none ];
+	edge [ arrowhead=none ];
+    subgraph sub0 {
+        n0 [ label=A];
+        n1 [ label=a];
+        n2 [ label=B];
+        n3 [ label=b];
+        n4 [ label=<&epsilon;> ];
+        n0 -> n1;
+        n0 -> n2;
+        n0 -> n3;
+        n2 -> n4;
+    }
+    subgraph sub5 {
+        n5 [ style=invis ];
+        n6 [ label=<&rarr;> ];
+        n5 -> n6 [ style=invis ];
+    }
+    subgraph sub7 {
+        n7 [ label=A];
+        n8 [ label=a];
+        n9 [ label=b];
+        n7 -> n8;
+        n7 -> n9;
+    }
+}

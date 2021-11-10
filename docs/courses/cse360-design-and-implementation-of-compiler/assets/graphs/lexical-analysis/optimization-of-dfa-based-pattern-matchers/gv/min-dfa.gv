@@ -1,0 +1,25 @@
+digraph finite_state_machine {
+	size="12,9!"
+    rankdir=LR;
+	node [shape = doublecircle];
+    n2 [ label="[g]"   ];
+    n3 [ label="[c]"   ];
+	node [shape = circle];
+    n0 [ label="[a,e]" ];
+    n1 [ label="[b,h]" ];
+    n4 [ label="[d,f]" ];
+    
+    node [ shape=none ];
+    start -> n0;
+    n0 -> n1 [ label="0" ];
+    n0 -> n4 [ label="1" ];
+    n1 -> n2 [ label="0" ];
+    n1 -> n3 [ label="1" ];
+    n2 -> n0 [ label="1" ];
+    n2 -> n2 [ label="0" ];
+    n3 -> n0 [ label="0" ];
+    n3 -> n3 [ label="1" ];
+    n4 -> n2 [ label="1" ];
+    n4 -> n3 [ label="0" ];
+
+}

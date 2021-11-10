@@ -1,0 +1,52 @@
+digraph tree {
+	size="12,9!"
+	node [ shape=none ];
+	edge [ arrowhead=none ];
+    n0 [ label="stmt"    ];
+    n1 [ label="if"    ];
+    n2 [ label="expr"  ];
+    n3 [ label="then"    ];
+    n4 [ label="stmt" ];
+    n5 [ label="else"    ];
+    n6 [ label="stmt"  ];
+    n7 [ label="if"    ];
+    n8 [ label="expr"   ];
+    n9 [ label="then"   ];
+    n10 [ label="stmt"   ];
+
+    i0 [ style=invis, shape=point ];
+    i1 [ style=invis, shape=point ];
+    i2 [ style=invis, shape=point ];
+    i3 [ style=invis, shape=point ];
+    i4 [ style=invis, shape=point ];
+    i5 [ style=invis, shape=point ];
+    i6 [ style=invis, shape=point ];
+    i7 [ style=invis, shape=point ];
+
+    n0 -> n1;
+    n0 -> n2;
+    n0 -> n3;
+    n0 -> n4;
+    n0 -> n5;
+    n0 -> n6;
+    n4 -> n7;
+    n4 -> n8;
+    n4 -> n9;
+    n4 -> n10;
+
+    n2 -> i0;
+    n2 -> i1;
+    i0 -> i1 [ label=<E<SUB>1</SUB>> ];
+    n6 -> i2;
+    n6 -> i3;
+    i2 -> i3 [ label=<S<SUB>2</SUB>> ];
+    n8 -> i4;
+    n8 -> i5;
+    i4 -> i5 [ label=<E<SUB>2</SUB>> ];
+    n10 -> i6;
+    n10 -> i7;
+    i6 -> i7 [ label=<S<SUB>1</SUB>> ];
+
+    { rank=same; i0; i1; i2; i3; }
+    { rank=same; i4; i5; i6; i7; }
+}

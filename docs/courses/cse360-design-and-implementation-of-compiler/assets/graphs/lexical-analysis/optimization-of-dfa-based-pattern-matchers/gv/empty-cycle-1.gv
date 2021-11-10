@@ -1,0 +1,16 @@
+digraph finite_state_machine {
+	size="12,9!"
+    rankdir=LR;
+	node [shape = circle];
+    node [ style=filled ]; C; D;
+    node [ style="" ];
+    A -> B [ label="a" ];
+    A -> B [ label="ε" ];
+    A -> C [ label="ε" ];
+    C -> B [ label="b" ];
+    C -> D [ label="ε" ];
+    D -> A [ label="ε" ];
+    B -> E [ label="c" ];
+    C -> E [ label="ε" ];
+    E -> D [ label="ε" ];
+}

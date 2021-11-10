@@ -1,0 +1,9 @@
+digraph tree {
+	size="12,9!"
+	node [ shape=none ];
+	edge [ arrowhead=none ];
+    S -> c;
+    S -> A;
+    S -> d;
+    A -> a;
+}

@@ -1,0 +1,38 @@
+digraph tree {
+	size="12,9!"
+	node [ shape=none ];
+	edge [ arrowhead=none ];
+    subgraph sub0 {
+        n0 [ label=S ];
+        n1 [ label=c ];
+        n2 [ label=A ];
+        n3 [ label=d ];
+        n0 -> n1;
+        n0 -> n2;
+        n0 -> n3;
+    }
+    subgraph sub4 {
+        n4 [ label=S ];
+        n5 [ label=c ];
+        n6 [ label=A ];
+        n7 [ label=d ];
+        n8 [ label=a ];
+        n9 [ label=b ];
+        n4 -> n5;
+        n4 -> n6;
+        n4 -> n7;
+        n6 -> n8;
+        n6 -> n9;
+    }
+    subgraph sub10 {
+        n10 [ label=S ];
+        n11 [ label=c ];
+        n12 [ label=A ];
+        n13 [ label=d ];
+        n14 [ label=a ];
+        n10 -> n11;
+        n10 -> n12;
+        n10 -> n13;
+        n12 -> n14;
+    }
+}

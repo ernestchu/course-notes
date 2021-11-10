@@ -1,0 +1,21 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	size="12,9!"
+	node [ 
+        label = "";
+        shape = doublecircle;
+    ]; E;
+	node [ shape=circle ];
+    subgraph cluster_0 {
+        style=rounded;
+        color=black;
+        label=A;
+        n0 -> n1 [ style=dashed ];
+    }
+    edge [ weight=5 ];
+    S -> n0 [ label="ε" ];
+    n1 -> E [ label="ε" ];
+    edge [ weight=1 ];
+    n1:n -> n0:n [ label="ε" ];
+    S -> E [ label="ε" ];
+}

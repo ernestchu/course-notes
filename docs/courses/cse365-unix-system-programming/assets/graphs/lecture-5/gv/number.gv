@@ -1,0 +1,28 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	size="12,9!"
+	node [label=""; shape = doublecircle]; B D G;
+	node [shape = circle];
+	S -> A [label = "+"];
+	S -> A [label = "-"];
+	S -> B [label = "digit"];
+
+	A -> B [label = "digit"];
+
+	B -> B [label = "digit"];
+	B -> C [label = "."];
+	B -> E [label = "E/e"];
+
+	C -> D [label = "digit"];
+
+	D -> D [label = "digit"];
+	D -> E [label = "E/e"];
+
+	E -> F [label = "+"];
+	E -> F [label = "-"];
+	E -> G [label = "digit"];
+
+	F -> G [label = "digit"];
+
+	G -> G [label = "digit"];
+}

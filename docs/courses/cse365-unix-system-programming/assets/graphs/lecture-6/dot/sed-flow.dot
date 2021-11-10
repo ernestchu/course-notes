@@ -1,0 +1,49 @@
+digraph G {
+	rankdir=LR;
+	size="12,9!"
+    start [
+        label = "start";
+        shape = oval;
+        style=filled;
+    ];
+    stop [
+        label = "stop";
+        shape = oval;
+        style=filled;
+    ];
+    gets [
+        label = "gets()";
+        shape = diamond;
+    ];
+    execute [
+        label = "execute next\nsed command\n& update pattern space\n(& maybe print)";
+        shape = rect;
+    ];
+    more [
+        label = "more sed\nsubcommands?";
+        shape = diamond;
+    ];
+    stdout [
+        label = "standard out"
+        shape = invtrapezium;
+        style = filled;
+    ];
+    
+    start     -> gets;
+    gets:e    -> execute:w [ label = "Yes" ];
+    gets      -> stop [ label = "No" ];
+    execute:e -> more:w;
+    stdout    -> execute:e [ style = invis ];
+    execute:e -> stdout [ label = "[pPcia=]"; style = dashed ];
+    more:n    -> gets:n [ label = "No" ];
+    more:n    -> stdout [ label = "no -n"; style = dashed ];
+    more:s    -> execute:s [ label = "Yes" ];
+    {
+        rank=same;
+        stop; gets;
+    }
+    {
+        rank=same;
+        execute; stdout;
+    }
+}

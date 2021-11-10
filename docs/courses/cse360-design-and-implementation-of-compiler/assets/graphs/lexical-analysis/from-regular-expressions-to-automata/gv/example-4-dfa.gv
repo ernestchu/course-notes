@@ -1,0 +1,29 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	size="12,9!"
+    S [ style=invis ];
+	n0 [
+        label = "{1}";
+        shape = circle;
+    ]
+	n1 [ 
+        label = "{2,3,4,5,7,10}";
+        shape = doublecircle;
+    ]
+    n2 [ 
+        label = "{6,9,10,4,5,7}";
+        shape = doublecircle;
+    ]
+    n3 [ 
+        label = "{8,9,10,4,5,7}";
+        shape = doublecircle;
+    ]
+    S -> n0;
+    n0 -> n1 [ label="letter" ];
+    n1 -> n2 [ label="letter" ];
+    n1 -> n3 [ label="digit" ];
+    n2 -> n2 [ label="letter" ];
+    n2 -> n3 [ label="digit" ];
+    n3 -> n3 [ label="digit" ];
+    n3 -> n2 [ label="letter" ];
+}

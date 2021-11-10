@@ -1,0 +1,24 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	size="12,9!"
+    S [ style=invis ];
+    E [ style=invis ];
+	node [ 
+        label = "";
+        shape = doublecircle;
+    ]; e3;
+	node [ shape=circle ];
+    S -> e0;
+    e0 -> n0 [ label="ε" ];
+    n0 -> n1 [ label="a" ];
+    n1 -> n2 [ label="ε" ];
+    n2 -> n3 [ label="b" ];
+    n3 -> e3 [ label="ε" ]
+    e0 -> n4 [ label="ε" ];
+    n4 -> n5 [ label="a" ];
+    n5 -> e3 [ label="ε" ];
+    e3 -> E [ style=invis ];
+
+    { rank=same; n1; n4; }
+    { rank=same; n2; n5; }
+}
