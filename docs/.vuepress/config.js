@@ -33,5 +33,14 @@ module.exports = {
   },
   // extendsMarkdown: (md) => {
   //   md.use(mathjax3)
+  // },
+  // bundlerConfig: {
+  //   vuePluginOptions: {
+  //     template: {
+  //       compilerOptions: {
+  //         isCustomElement: tag => tag.startsWith('mjx-')
+  //       }
+  //     }
+  //   }
   // }
 }
