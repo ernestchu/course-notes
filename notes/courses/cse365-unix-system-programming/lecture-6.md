@@ -408,7 +408,7 @@ Also, remove matches that contain same characters.
 sed "y/undersa/what i'/"
 ```
 Done. The simplest form is obtained. Now we can examine it.
-```{2,4}
+```sh{2,4}
 % cat F
 % sed "you understand now what it'll do" F
 ihow what ht'th?

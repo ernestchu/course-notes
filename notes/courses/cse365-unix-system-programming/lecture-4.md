@@ -224,7 +224,7 @@ My current directory is /Users/ernestchu
 :::
 ::: danger Quotes Within Quotes
 The strength is based on what commands do they surpress. But it doesn't mean `\` surpresses `'` or `'` surpresses `"`.
-```{9-12}
+```sh{9-12}
 % echo "'"
 '
 % echo '"'
