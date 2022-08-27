@@ -298,7 +298,7 @@ nc -l 1234
 ```
 This start a server on your computer listening on port 1234. Then go to your browser and enter the URL `localhost:1234` to make an HTTP request. On your terminal, you should see the server received the request.
 
-```{1}
+```sh{1}
 GET / HTTP/1.1
 Host: localhost:1234
 Upgrade-Insecure-Requests: 1
