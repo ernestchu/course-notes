@@ -1,1 +1,0 @@
-import{c as e,o as r,a,d as t}from"./app.bdc3a143.js";import{_ as o}from"./plugin-vue_export-helper.5a098b48.js";const s={},c={id:"transport-layer",tabindex:"-1"},n=a("a",{class:"header-anchor",href:"#transport-layer","aria-hidden":"true"},"#",-1),_=t(" Transport Layer"),d=[n,_];function p(h,i){return r(),e("h1",c,d)}var m=o(s,[["render",p]]);export{m as default};
